@@ -1,0 +1,96 @@
+.nav__container {
+  display: flex;
+  align-items: center;
+  padding: 30px 10%;
+  justify-content: space-between;
+}
+
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #edf0f1;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.btn-scheadule {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+#logo {
+  height: 100px;
+  width: 230px;
+}
+
+.navbar-item {
+  display: flex;
+  margin: 0.7em 0;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  margin-right: 2vw;
+  text-decoration-line: none;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.navbar-item:hover {
+  transition: all 0.4s ease 0s;
+  color: #0088a9;
+}
+
+.navbar-list {
+  color: white;
+  display: flex;
+  float: right;
+  justify-content: center;
+  text-align: center;
+  padding: 1px 3px;
+}
+
+@media screen and (max-width: 840px) {
+  .btn-scheadule {
+    font-size: 12px;
+  }
+  .navbar-item {
+    font-size: 12px;
+  }
+  #logo {
+    height: 100px;
+    width: 205px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .navbar-list {
+    display: none;
+  }
+  .btn-scheadule {
+    display: none;
+  }
+}
+@media screen and (max-width: 1150px) {
+  button {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .navbar-item {
+    font-size: 13px;
+  }
+}
+
+.navbar__icon {
+  padding-right: 5px;
+}
