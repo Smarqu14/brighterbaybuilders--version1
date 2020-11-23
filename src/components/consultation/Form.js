@@ -9,6 +9,31 @@ class Form extends React.Component {
     number: "",
     message: "",
   };
+  sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_pbjcjte",
+        "template_ueylrud",
+        e.target,
+        "user_atqn5FizjiXP13egltGrm"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    this.setState({
+      name: "",
+      email: "",
+      number: "",
+      message: "",
+    });
+  };
 
   handleOnChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -17,7 +42,7 @@ class Form extends React.Component {
   render() {
     return (
       <div className="form-container">
-        <form className="form">
+        <form className="form" onSubmit={this.sendEmail}>
           <h1>Scheadule Consultation</h1>
           <label className="form-label">Name :&nbsp;</label>
           <input
@@ -27,7 +52,7 @@ class Form extends React.Component {
             placeholder="Enter your name"
             value={this.state.name}
             onChange={this.handleOnChange}
-          />{" "}
+          />
           <br></br>
           <label className="form-label">Email :&nbsp;</label>
           <input
@@ -72,54 +97,3 @@ class Form extends React.Component {
 }
 
 export default Form;
-// function sendEmail(e) {
-//   e.preventDefault();
-
-//   emailjs
-//     .sendForm(
-//       "service_pbjcjte",
-//       "template_ueylrud",
-//       e.target,
-//       "user_atqn5FizjiXP13egltGrm"
-//     )
-//     .then(
-//       (result) => {
-//         console.log(result.text);
-//       },
-//       (error) => {
-//         console.log(error.text);
-//       }
-//     );
-//   e.target.reset();
-// }
-
-//   return (
-//     // <form className="form" onSubmit={sendEmail}>
-//     //   <label>Name</label>
-//     //   <input type="text" name="user_name" />
-//     //   <label>Email</label>
-//     //   <input type="email" name="user_email" />
-//     //   <label>Message</label>
-//     //   <textarea name="message" />
-//     //   <input type="submit" value="Send" />
-//     // </form>
-
-//     <form>
-//       First Name:{" "}
-//       <input
-//         type="text"
-//         name="firstName"
-//         value={this.state.firstName}
-//         onChange={this.handleOnChange}
-//       />{" "}
-//       <br></br>
-//       Last Name:{" "}
-//       <input
-//         type="text"
-//         name="lastName"
-//         value={this.state.lastName}
-//         onChange={this.handleOnChange}
-//       />
-//     </form>
-//   );
-// }

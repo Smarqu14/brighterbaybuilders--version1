@@ -38,6 +38,7 @@
 .form-inputs {
   margin-bottom: 0.5rem;
   padding-right: 100px;
+  height: 24px;
   width: 72%;
 }
 .form-textarea {
