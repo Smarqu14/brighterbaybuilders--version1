@@ -9,7 +9,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
-    <div className="App" id="outer-container">
+    <div id="outer-container">
       <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
       <div id="page-wrap">
         <NavBar />

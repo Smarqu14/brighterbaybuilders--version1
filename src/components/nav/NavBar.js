@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import { Link } from "react-scroll";
 import Fade from "react-reveal/Fade";
-import logo from "../../img/5.png";
+import logo from "../../img/logo.png";
 import { AiTwotoneHome, AiTwotoneMail } from "react-icons/ai";
 import { BsHammer, BsChatFill, BsPeopleFill } from "react-icons/bs";
 

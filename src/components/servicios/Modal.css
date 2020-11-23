@@ -12,7 +12,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 15px;
 }
 
 .modal__container {
@@ -30,7 +29,7 @@
 }
 
 .about__exit-icon {
-  color: black;
-  font-size: 1.9em;
+  color: rgba(150, 125, 125, 0.892);
+  font-size: 2.3em;
   position: absolute;
 }
