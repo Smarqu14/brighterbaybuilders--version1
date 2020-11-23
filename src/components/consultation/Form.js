@@ -8,9 +8,13 @@ class Form extends React.Component {
     email: "",
     number: "",
     message: "",
+    submitted: false,
   };
   sendEmail = (e) => {
     e.preventDefault();
+    this.setState({
+      submitted: true,
+    });
 
     emailjs
       .sendForm(
@@ -41,11 +45,12 @@ class Form extends React.Component {
 
   render() {
     return (
-      <div className="form-container">
+      <div className="form-container" id="consultation">
         <form className="form" onSubmit={this.sendEmail}>
           <h1>Scheadule Consultation</h1>
           <label className="form-label">Name :&nbsp;</label>
           <input
+            required
             className="form-inputs"
             type="text"
             name="name"
@@ -56,16 +61,19 @@ class Form extends React.Component {
           <br></br>
           <label className="form-label">Email :&nbsp;</label>
           <input
+            required
             className="form-inputs"
             type="email"
             name="email"
             value={this.state.email}
             placeholder="Enter your email"
             onChange={this.handleOnChange}
+            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
           />
           <br></br>
           <label className="form-label">Cell # :&nbsp;</label>
           <input
+            required
             className="form-inputs"
             type="text"
             name="number"
@@ -76,6 +84,7 @@ class Form extends React.Component {
           <br></br>
           <p className="form-label">Tell us about your project :&nbsp;</p>
           <textarea
+            required
             name="message"
             rows="10"
             className="form-textarea"

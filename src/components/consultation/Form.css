@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  /* height: 650px; */
 }
 
 .form-container h1 {
@@ -160,13 +159,13 @@
   }
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
   .form-container {
     width: 300px;
-    height: 400px;
+    height: 600px;
   }
   .form {
-    height: 370px;
+    height: 450px;
     width: 300px;
     padding: 0;
     margin: 0;
